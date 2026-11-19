@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Farmácia Porto Azul – Atendimento farmacêutico em Olinda</title>
+<meta name="description" content="Farmácia Porto Azul, em Olinda (PE): medicamentos, aferição de pressão e glicemia, entrega em domicílio e atendimento pelo WhatsApp. Aberta de segunda a domingo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#eef4ff;--ink:#0a2352;--text:#22344f;--muted:#54678a;--pri:#1857d6;--pri-h:#0f43aa;--onpri:#fff;--line:#d3e0f6;--hdr:#fffffff2;--ok:#17803f;--veil:255,255,255;
+--serif:"Fraunces",Georgia,"Times New Roman",serif;--sans:"Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--veil:10,20,36;--bg:#0a1424;--soft:#10203a;--ink:#eaf2ff;--text:#cfdbf0;--muted:#9bb0cf;--pri:#5a9bff;--pri-h:#82b4ff;--onpri:#06152f;--line:#223a5f;--hdr:#0a1424ee;--ok:#4fd08a}}
+:root[data-theme="dark"]{--veil:10,20,36;--bg:#0a1424;--soft:#10203a;--ink:#eaf2ff;--text:#cfdbf0;--muted:#9bb0cf;--pri:#5a9bff;--pri-h:#82b4ff;--onpri:#06152f;--line:#223a5f;--hdr:#0a1424ee;--ok:#4fd08a}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px)}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 var(--sans)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--hdr)}
+h1,h2,h3{font-family:var(--serif);color:var(--ink);line-height:1.15;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--pri);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--hdr);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font:700 1.2rem var(--serif);color:var(--ink)}
+.cross{width:34px;height:34px;border-radius:9px;background:var(--pri);position:relative;flex:none}
+.cross::before,.cross::after{content:"";position:absolute;background:var(--onpri);border-radius:2px;left:50%;top:50%;transform:translate(-50%,-50%)}
+.cross::before{width:18px;height:6px}.cross::after{width:6px;height:18px}
+nav{display:flex;align-items:center;gap:6px}
+nav a{padding:8px 12px;text-decoration:none;font-weight:500;border-radius:8px}
+nav a:hover{background:var(--soft)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;border-radius:10px;background:var(--pri);color:var(--onpri);font:600 1rem var(--sans);text-decoration:none;border:2px solid var(--pri);cursor:pointer}
+.btn:hover{background:var(--pri-h);border-color:var(--pri-h)}
+.btn.wa{background:#15803d;border-color:#15803d;color:#fff}
+.btn.wa:hover{background:#116b32;border-color:#116b32}
+.btn.alt{background:transparent;color:var(--pri)}
+.btn.alt:hover{background:var(--soft)}
+nav .btn{padding:9px 16px;margin-left:6px}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:8px 12px;font:600 .95rem var(--sans);cursor:pointer}
+.hero{--photo:url(images/fachada.jpg);padding:88px 0 96px;background:linear-gradient(90deg,rgba(var(--veil),1) 0%,rgba(var(--veil),1) 38%,rgba(var(--veil),.85) 54%,rgba(var(--veil),.15) 80%,rgba(var(--veil),0) 100%),var(--photo) right 20%/62% auto no-repeat}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(2.2rem,5.2vw,3.5rem);letter-spacing:-.01em}
+.hero p.lead{font-size:1.2rem;max-width:34em;margin:18px 0 28px;color:var(--muted)}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.now{background:var(--soft);border:1px solid var(--line);border-radius:16px;padding:28px}
+.now .st{display:flex;align-items:center;gap:10px;font:600 1.15rem var(--sans);color:var(--ink)}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--muted);flex:none}
+.now.open .dot{background:var(--ok);box-shadow:0 0 0 5px color-mix(in srgb,var(--ok) 25%,transparent)}
+.now p{margin:6px 0 18px;color:var(--muted)}
+.now dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 18px;border-top:1px solid var(--line);padding-top:16px}
+.now dt{color:var(--muted)}.now dd{margin:0;font-weight:600;color:var(--ink);text-align:right}
+section{padding:72px 0}
+section.soft{background:var(--bg);border-top:1px solid var(--line)}
+h2{font-size:clamp(1.7rem,3.6vw,2.4rem);margin-bottom:14px}
+.intro{max-width:36em;color:var(--muted);margin:0 0 36px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
+.about p{margin:0 0 16px;max-width:36em}
+.facts{border-left:4px solid var(--pri);padding-left:24px;display:grid;gap:22px;align-content:start}
+.facts b{display:block;font:700 1.6rem var(--serif);color:var(--ink)}
+.facts span{color:var(--muted)}
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
+.svc div{padding:22px 0 22px 20px;border-top:1px solid var(--line);border-left:4px solid var(--pri);margin-top:-1px}
+.svc h3{font-size:1.25rem;margin-bottom:6px}
+.svc p{margin:0;color:var(--muted)}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.loc address{font-style:normal;margin-bottom:20px}
+table{width:100%;border-collapse:collapse;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+td{padding:12px 18px;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}td+td{text-align:right;font-weight:600;color:var(--ink)}
+.contact{background:var(--bg);border-top:4px solid var(--pri);text-align:left}
+.contact h2{color:var(--ink)}
+.contact p{max-width:34em;margin:0 0 26px;color:var(--muted)}
+.contact ul{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:8px 32px}
+footer{padding:32px 0 40px;font-size:.92rem;color:var(--muted);border-top:1px solid var(--line)}
+footer p{margin:0 0 8px}
+.fab{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:9;box-shadow:0 6px 18px rgba(10,35,82,.28);border-radius:999px;padding:14px 20px}
+@media (max-width:860px){
+.hero .wrap,.about,.loc,.svc{grid-template-columns:1fr}
+.hero{padding:40px 0 48px}section{padding:52px 0}.hero .wrap,.about,.loc{gap:32px}
+.menu{display:block}
+nav{display:none;position:absolute;left:0;right:0;top:68px;background:var(--bg);flex-direction:column;align-items:stretch;padding:12px 20px 18px;border-bottom:1px solid var(--line)}
+nav.open{display:flex}nav a{padding:12px}nav .btn{margin:8px 0 0}}
+@media (max-width:860px){.hero{background:linear-gradient(rgba(var(--veil),.84),rgba(var(--veil),.84)),var(--photo) center top/cover no-repeat}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap bar">
+<a class="logo" href="#inicio" aria-label="Farmácia Porto Azul, início"><span class="cross"></span>Porto Azul</a>
+<button class="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Principal">
+<a href="#sobre">Sobre</a><a href="#servicos">Serviços</a><a href="#localizacao">Localização</a>
+<a class="btn wa" href="https://wa.me/5581999990000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Farm%C3%A1cia%20Porto%20Azul" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="hero" id="inicio">
+<div class="wrap">
+<div>
+<h1>Cuidado de confiança, a poucos passos de casa.</h1>
+<p class="lead">Medicamentos, orientação farmacêutica e entrega em domicílio em Olinda. Fale com a gente pelo WhatsApp e receba atendimento de quem conhece o seu bairro.</p>
+<div class="cta">
+<a class="btn wa" href="https://wa.me/5581999990000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Farm%C3%A1cia%20Porto%20Azul" target="_blank" rel="noopener">Pedir pelo WhatsApp</a>
+<a class="btn alt" href="#servicos">Ver serviços</a>
+</div>
+</div>
+<aside class="now" id="now" aria-live="polite">
+<div class="st"><span class="dot"></span><span id="st">Conferindo horário…</span></div>
+<p id="stsub">Atendimento de segunda a domingo.</p>
+<dl><dt>Segunda a sábado</dt><dd>7h às 21h</dd><dt>Domingo e feriados</dt><dd>8h às 14h</dd><dt>Entrega</dt><dd>Até 40 min</dd></dl>
+</aside>
+</div>
+</div>
+
+<section class="soft" id="sobre">
+<div class="wrap about">
+<div>
+<h2>Uma farmácia de bairro, com padrão de grande rede</h2>
+<p>A Porto Azul nasceu em 2012, no Carmo, com uma ideia simples: tratar cada cliente pelo nome e explicar com calma como usar cada medicamento.</p>
+<p>Nossa equipe é treinada para orientar sobre posologia, interações e armazenamento. Quando o caso pede um médico, a gente avisa, sem rodeios.</p>
+<p>Trabalhamos com medicamentos de referência, genéricos e similares, além de higiene, dermocosméticos e cuidados com bebês.</p>
+</div>
+<div class="facts">
+<div><b>Desde 2012</b><span>atendendo famílias de Olinda</span></div>
+<div><b>Farmacêutica responsável</b><span>Dra. Helena Albuquerque, CRF-PE 00000</span></div>
+<div><b>Entrega em domicílio</b><span>Olinda e bairros vizinhos de Recife</span></div>
+</div>
+</div>
+</section>
+
+<section id="servicos">
+<div class="wrap">
+<h2>O que você encontra aqui</h2>
+<p class="intro">Do balcão ao WhatsApp, os serviços que mais ajudam no dia a dia.</p>
+<div class="svc">
+<div><h3>Medicamentos e genéricos</h3><p>Referência, genéricos e similares. Se não tiver em estoque, buscamos para você.</p></div>
+<div><h3>Aferição de pressão arterial</h3><p>Rápida, sem custo e com orientação sobre o resultado.</p></div>
+<div><h3>Teste de glicemia</h3><p>Medição na hora, com a privacidade que você merece.</p></div>
+<div><h3>Entrega em domicílio</h3><p>Peça pelo WhatsApp e receba em casa. Pagamento por Pix, cartão ou dinheiro.</p></div>
+<div><h3>Orientação farmacêutica</h3><p>Tire dúvidas sobre dose, horários e combinações com um profissional.</p></div>
+<div><h3>Higiene e dermocosméticos</h3><p>Produtos para a família toda, do bebê ao idoso.</p></div>
+</div>
+</div>
+</section>
+
+<section class="soft" id="localizacao">
+<div class="wrap loc">
+<div>
+<h2>Venha nos visitar</h2>
+<address>Rua do Amparo, 123, Carmo<br>Olinda, PE, CEP 53120-000<br>Ao lado da Praça do Carmo</address>
+<a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rua+do+Amparo+Carmo+Olinda+PE" target="_blank" rel="noopener">Como chegar</a>
+</div>
+<table aria-label="Horário de funcionamento">
+<tr><td>Segunda a sexta</td><td>7h às 21h</td></tr>
+<tr><td>Sábado</td><td>7h às 21h</td></tr>
+<tr><td>Domingo e feriados</td><td>8h às 14h</td></tr>
+</table>
+</div>
+</section>
+
+<section class="contact" id="contato">
+<div class="wrap">
+<h2>Precisa de algo hoje?</h2>
+<p>Mande o nome do produto ou uma foto da receita e a gente responde rápido. É o jeito mais prático de pedir.</p>
+<a class="btn wa" href="https://wa.me/5581999990000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Farm%C3%A1cia%20Porto%20Azul" target="_blank" rel="noopener">Chamar no WhatsApp</a>
+<ul><li>WhatsApp: (81) 99999-0000</li><li>contato@portoazul.example</li><li>Instagram: @farmaciaportoazul</li></ul>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+<p>© 2026 Farmácia Porto Azul. CNPJ 00.000.000/0001-00. Farmacêutica responsável: Dra. Helena Albuquerque, CRF-PE 00000.</p>
+<p>Medicamentos podem causar efeitos indesejáveis. Em caso de dúvida, procure orientação médica ou farmacêutica.</p>
+<p>Site de demonstração com dados fictícios, criado por Lucas Leonardo.</p>
+</div>
+</footer>
+
+<a class="btn wa fab" href="https://wa.me/5581999990000?text=Ol%C3%A1%2C%20vim%20pelo%20site%20da%20Farm%C3%A1cia%20Porto%20Azul" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">WhatsApp</a>
+
+<script>
+(function(){
+var b=document.querySelector('.menu'),n=document.getElementById('nav');
+b.addEventListener('click',function(){var o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
+n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');b.setAttribute('aria-expanded','false')}});
+var d=new Date(),h=d.getHours()+d.getMinutes()/60,w=d.getDay(),s=w===0?[8,14]:[7,21];
+var box=document.getElementById('now'),st=document.getElementById('st'),sub=document.getElementById('stsub');
+if(h>=s[0]&&h<s[1]){box.classList.add('open');st.textContent='Aberto agora';sub.textContent='Atendemos até às '+s[1]+'h hoje.'}
+else{st.textContent='Fechado agora';var nx=h<s[0]?s:(w===6?[8,14]:[7,21]);sub.textContent=(h<s[0]?'Abrimos hoje':'Abrimos amanhã')+' às '+nx[0]+'h. Deixe sua mensagem no WhatsApp.'}
+})();
+</script>
+</body>
+</html>
